@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/style.css">
+    <script src="/js/script.js"></script>
+    <title>Ош</title>
+</head>
+<body>
+    <section id="about">
+        <h2>Ош жөнүндө</h2>
+        <p>Ош облусу Кыргызстандагы эски жана тарыхый шаар, ошондой эле өлкөнүн түштүгүндөгү маанилүү экономикалык борбор. Шаарда көптөгөн туристтик жерлер, анын ичинде Сулайман-Тоо жана Ош базары сыяктуу атактуу жайлар жайгашкан.</p>
+    </section>
+
+    <section id="attractions">
+        <h2>Оштогу туристтик жайлар</h2>
+        <ul>
+            <li>
+                <h3>Сулайман-Тоо</h3>
+                <p>Сулайман-Тоо — Ош шаарындагы эң маанилүү тарыхый жана диний жайлардын бири. Бул тоо байыркы мезгилдерде мусулмандардын ажыга чыгуу үчүн келген ыйык жайы катары белгилүү. Сулайман-Тоо өзүнүн кооздугу жана тарыхый мааниси менен туристтердин көңүлүн өзүнө тартат.</p>
+                <img src="/images/сулайман-тоо 2.jpg" alt="Айгүл-Таш" width="250px" height="150px">
+                <h3>2000 сом</h3>
+                <br><br><a href="/templates/сулайман-тоо.html" class="btn">Толук маалымат</a>
+            </li>
+            <li>
+                <h3>Абшыр-ата</h3>
+                <p>Абшыр-Ата — Ош облусунун Ноокат районундагы айыл. Ноокат шаарынан 20 км батышта, Абшир-Сай дарыясынын жээгинде жайгашкан. Айылда орто мектеп, бала бакча, үч мечит, спорттук комплекс жана башка социалдык объектилер бар. ​</p>
+                <img src="/images/абшыр-ата.jpg" alt="Кан-и-Гут">
+                <h3>2500 сом</h3>
+                <br><br><a href="/templates/абшыр-ата.html" class="btn">Толук маалымат</a>
+            </li>
+            <li>
+                <h3>Алтын-жайлоо</h3>
+                <p>Алтын Жайлоо — Ош облусундагы кооз тоо өрөөнү. Ал жаратылыштын байлыгы, жашыл жайыттары жана тоо чокулары менен белгилүү. Бул жер альпинизм жана жөө басуу үчүн популярдуу, ошондой эле мал чарбачылыгы үчүн маанилүү аймак болуп саналат.</p>
+                <img src="/images/алтын-жайлоо.jpg" alt="Кан-и-Гут">
+                <h3>4000 сом</h3>
+                <br><br><a href="/templates/алтын-жайлоо.html" class="btn">Толук маалымат</a>
+            </li>
+            <li>
+                <h3>Кичи-Алай өрөөнү</h3>
+                <p>Кичи Алай өрөөнү Кыргызстандын түштүгүндө, Ош облусунда жайгашкан. Ал Памир-Алай тоо системинин бир бөлүгү болуп, кооз табигат жана бийик тоолор менен белгилүү. Аймак альпинизм, жөө басуу жана башка ачык асман алдындагы активдүүлүктөр үчүн популярдуу. Кичи Алай өрөөнү тарыхый жана маданий эстеликтерге да бай, бул аймакты тарыхка кызыккан адамдар үчүн да кызыктуу кылат.</p>
+                <img src="/images/кичи-алай өрөөнү.jpg" alt="Кан-и-Гут">
+                <h3>3500 сом</h3>
+                <br><br><a href="/templates/кичи алай өрөөнү.html" class="btn">Толук маалымат</a>
+            </li>
+        </ul>
+    </section>
+    <style>
+        h2 {
+            color: #4a4a4a;
+            border-bottom: 3px solid #4a4a4a;
+            padding-bottom: 15px;
+            margin-bottom: 25px;
+            font-size: 24px;
+            text-transform: uppercase;
+            text-align: center;
+        }
+    
+        ul {
+            display: flex;
+            justify-content: space-between;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            gap: 30px;
+            flex-wrap: wrap;  
+        }
+    
+        li {
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            width: 30%; 
+            text-align: center;
+            box-sizing: border-box;
+        }
+    
+        li:hover {
+            background-color: #e9e9e9;
+            transform: translateY(-5px);
+        }
+    
+        .btn {
+            background-color: #108fde;
+            color: white;
+            text-decoration: none;
+            padding: 12px 20px;
+            border-radius: 8px;
+            font-weight: bold;
+            display: inline-block;
+            transition: background-color 0.3s ease;
+        }
+    
+        .btn:hover {
+            background-color: #0077ff;
+        }
+    </style>
+</body>
+</html>

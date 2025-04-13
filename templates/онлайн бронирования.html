@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="kg">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/style.css">
+    <script src="/js/script.js"></script>
+    <title>Онлайн ээлөө</title>
+</head>
+<body>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background: url('/images/про.png') no-repeat center center/cover;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+  
+      .booking-section {
+        max-width: 800px;
+        margin: 40px auto;
+        padding: 30px;
+        background-color: rgba(255, 255, 255, 0.9);
+        border-radius: 12px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        text-align: center;
+      }
+  
+      .booking-form {
+        background-color: #eef2f7;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+      }
+  
+      .booking-form h3 {
+        font-size: 24px;
+        color: #4c6ef5;
+        margin-bottom: 15px;
+      }
+  
+      .booking-form label {
+        font-size: 16px;
+        display: block;
+        margin: 10px 0 5px;
+        color: #555;
+      }
+  
+      .booking-form input,
+      .booking-form select {
+        width: 100%;
+        padding: 12px;
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        font-size: 16px;
+      }
+  
+      .booking-form button {
+        background-color: #4c6ef5;
+        color: white;
+        padding: 15px 25px;
+        border: none;
+        border-radius: 8px;
+        font-size: 18px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+      }
+  
+      .booking-form button:hover {
+        background-color: #1a3e9e;
+      }
+  
+      .booking-confirmation {
+        display: none;
+        margin-top: 30px;
+        background-color: #d4edda;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        color: #155724;
+        border: 1px solid #c3e6cb;
+        animation: fadeOut 3s ease forwards;
+        animation-delay: 3s;
+      }
+  
+      .last-booking {
+        margin-top: 20px;
+        padding: 15px;
+        background-color: #f8f9fa;
+        border-radius: 8px;
+        border: 1px solid #ddd;
+      }
+  
+      .clear-btn {
+        background-color: #dc3545;
+        color: white;
+        padding: 8px 15px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        margin-top: 10px;
+      }
+  
+      .clear-btn:hover {
+        background-color: #c82333;
+      }
+  
+      #bookingList {
+        position: absolute;
+        left: 30px;
+        top: 30px;
+        width: 250px;
+        max-height: 90vh;
+        overflow-y: auto;
+        background: rgba(255, 255, 255, 0.95);
+        padding: 15px;
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+      }
+  
+      #bookingList h3 {
+        margin-bottom: 10px;
+        color: #333;
+      }
+  
+      .booking-entry {
+        background: #f1f1f1;
+        margin-bottom: 10px;
+        padding: 8px;
+        border-radius: 6px;
+        font-size: 14px;
+        text-align: left;
+      }
+  
+    </style>
+  </head>
+  <body>
+  
+  <div id="bookingList">
+    <h3>Брондолгондор</h3>
+    <div id="bookingEntries"></div>
+  </div>
+  
+  <section class="booking-section">
+    <h2>Онлайн ээлөө</h2>
+    <div class="booking-form">
+      <h3>Туруңузду тандаңыз</h3>
+      <form id="bookingForm" action="#" method="post">
+        <label for="tour">Тур</label>
+        <select id="tour" name="tour" required>
+          <option value="Чолпон-ата">Чолпон-ата</option>
+          <option value="Кара-кол">Кара-кол</option>
+          <option value="Бактуу-долоноту">Бактуу-долоноту</option>
+          <option value="Жети-Өгүз">Жети-Өгүз</option>
+          <option value="Барскоон шаркыратмасы">Барскоон шаркыратмасы</option>
+          <option value="Чоң-жаргылчак шаркыратмасы">Чоң-жаргылчак шаркыратмасы</option>
+          <option value="Көл-төр көлү">Көл-төр көлү</option>
+          <option value="Айгүл-таш">Айгүл-таш</option>
+          <option value="Кан-и-Гут үңкүрү">Кан-и-Гут үңкүрү</option>
+          <option value="Төрт-күл суу сактагычы">Төрт-күл суу сактагычы</option>
+          <option value="Сулайман-Тоо">Сулайман-Тоо</option>
+          <option value="Абшыр-ата">Абшыр-ата</option>
+          <option value="Алтын жайлоо">Алтын жайлоо</option>
+          <option value="Кичи-Алай өрөөнү">Кичи-Алай өрөөнү</option>
+          <option value="Сары-Челек">Сары-Челек</option>
+          <option value="Арсланбап">Арсланбап</option>
+          <option value="Кызыл-үңкүр">Кызыл-үңкүр</option>
+          <option value="Соң-көл">Соң-көл</option>
+          <option value="Таш-Рабат">Таш-Рабат</option>
+          <option value="Чатыр-көл">Чатыр-көл</option>
+          <option value="Бурана мунарасы">Бурана мунарасы</option>
+          <option value="Ак-Бешим">Ак-Бешим</option>
+          <option value="Көк-Ойрук көлү">Көк-Ойрук көлү</option>
+          <option value="Ала-Арча улуттук паркы">Ала-Арча улуттук паркы</option>
+          <option value="Ысык-Ата">Ысык-Ата</option>
+          <option value="Улуттук тарых музейи">Улуттук тарых музейи</option>
+        </select>
+  
+        <label for="date">Туризмдин датасы</label>
+        <input type="date" id="date" name="date" required>
+  
+        <label for="people">Адамдардын саны</label>
+        <input type="number" id="people" name="people" min="1" placeholder="Адамдардын" required>
+  
+        <label for="price">Баасы</label>
+        <input type="number" id="price" name="price" placeholder="Турдун баасын жазыңыз" required>
+  
+        <label for="name">Сиздин атыңыз</label>
+        <input type="text" id="name" name="name" placeholder="Атыңызды жазыңыз" required>
+        
+        <label for="phone">Телефон номериңиз</label>
+        <input type="tel" id="phone" name="phone" placeholder="Телефон номериңизди жазыңыз" required>
+  
+        <button type="submit" class="submit-btn">Брондоо</button>
+      </form>
+  
+      <div id="bookingConfirmation" class="booking-confirmation">
+        <h3>Брондогонуңуз үчүн рахмат!</h3>
+        <p>Ийгиликтүү брондолду, биз сиз менен жакын арада байланышабыз.</p>
+        <div id="savedData"></div>
+      </div>
+    </div>
+  </section>
+  
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const form = document.getElementById("bookingForm");
+      const bookingEntries = document.getElementById("bookingEntries");
+      const confirmation = document.getElementById("bookingConfirmation");
+      const lastBooking = document.getElementById("lastBooking");
+      const lastBookingData = document.getElementById("lastBookingData");
+      const clearBtn = document.createElement("button");
+      clearBtn.textContent = "Бардык Брондолгонду Тазалоо";
+      clearBtn.classList.add("clear-btn");
+      document.querySelector(".booking-section").appendChild(clearBtn);
+  
+      let allBookings = JSON.parse(localStorage.getItem("allBookings")) || [];
+      renderBookings();
+  
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
+  
+        const name = document.getElementById("name").value;
+        const tour = document.getElementById("tour").value;
+        const date = document.getElementById("date").value;
+        const people = document.getElementById("people").value;
+        const price = document.getElementById("price").value;
+        const phone = document.getElementById("phone").value;
+  
+        const booking = {
+          name, tour, date, people, price, phone
+        };
+  
+        allBookings.push(booking);
+        localStorage.setItem("allBookings", JSON.stringify(allBookings));
+        renderBookings();
+  
+        lastBooking.style.display = "block";
+        lastBookingData.innerHTML = `
+          <strong>${name}</strong><br>
+          ${tour} - ${date}<br>
+          ${people} адам, ${price} сом<br>
+          Тел: ${phone}
+        `;
+  
+        confirmation.style.display = "block";
+        form.reset();
+      });
+  
+      clearBtn.addEventListener("click", () => {
+        if (confirm("Бардык брондолгон турларды тазалоо каалагандыгыңызга ишенесизби?")) {
+          localStorage.removeItem("allBookings");
+          allBookings = [];
+          renderBookings();
+        }
+      });
+  
+      function renderBookings() {
+        bookingEntries.innerHTML = "";
+        allBookings.forEach(entry => {
+          const div = document.createElement("div");
+          div.className = "booking-entry";
+          div.innerHTML = `
+            <strong>${entry.name}</strong><br>
+            ${entry.tour} - ${entry.date}<br>
+            ${entry.people} адам<br>
+            Тел: ${entry.phone}
+          `;
+          bookingEntries.appendChild(div);
+        });
+      }
+    });
+  </script>
+  
+  </body>
+  
+  
+
+</html>

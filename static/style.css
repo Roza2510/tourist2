@@ -1,0 +1,350 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+  background-color: #00a2ff;
+  color: white;
+  padding: 10px 0;
+  background-image: url('/images/аба.jpg'); 
+  background-size: cover;
+  background-position: center;
+  margin-bottom: 0; 
+}
+
+
+
+
+.navbar {
+    background-color: green;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+nav ul li a:hover {
+    color: #ff6347;
+}
+
+.tour-list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); 
+  grid-template-rows: repeat(2, auto); 
+  gap: 20px;
+  list-style: none;
+  padding: 0;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.tour-item {
+  text-align: center;
+  border: 1px solid #ccc;
+  padding: 20px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+}
+
+.main-content h2 {
+  color: #ffffff;
+}
+
+
+
+.tour-item:hover {
+  transform: scale(1.05); 
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); 
+}
+
+.tour-item img {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 15px; 
+}
+
+.tour-item h4 {
+  font-size: 1.4rem;
+  color: #ffffff;
+  margin: 10px 0;
+}
+
+.tour-item p {
+  font-size: 1rem;
+  color: #ffffff;
+  margin: 10px 0;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #4ed447;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-top: 10px;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #33ff00; 
+}
+
+
+
+nav ul li a i {
+    margin-right: 8px;
+}
+
+section {
+    padding: 20px;
+    margin: 20px;
+}
+
+#home {
+    text-align: center;
+    background-color: #61c3de;
+    color: white;
+}
+
+#services, #destinations, #offers, #booking, #contact, #reviews, #gallery {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+h1, h2 {
+    color: #333;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background-image: url('/images/чөп.png'); 
+  background-size: cover; 
+  background-position: center; 
+  color: white;
+}
+
+footer h3 {
+  margin: 0;
+}
+
+footer a {
+  color: white;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+
+
+
+
+
+
+  .кнопка {
+    background-color: #0392e4;
+    color: white;
+    text-align: center;
+    border: none;
+    padding: 10px 32px;
+  }
+
+  
+  
+  form {
+    background-color: #eef2f7;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  }
+  form label {
+    display: block;
+    font-size: 16px;
+    color: #555;
+    margin: 10px 0 5px;
+  }
+  
+  form input,
+  form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+  }
+  
+  form textarea {
+    height: 150px;
+    resize: vertical;
+  }
+  form button {
+    background-color: #4c6ef5;
+    color: white;
+    padding: 15px 25px;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  form button:hover {
+    background-color: #1a3e9e;
+  }
+  
+     
+    
+       
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  max-width: 90%;
+  max-height: 80%;
+  border-radius: 10px;
+}
+
+.modal-close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  color: white;
+  font-size: 40px;
+  cursor: pointer;
+}
+
+.modal-close:hover {
+  color: #ccc;
+}
+  
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .modal-content {
+    max-width: 90%;
+    max-height: 80%;
+  }
+  
+  .modal img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+  }
+  
+  .modal-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+  }
+  
+  
+  .main-content {
+    background-image: url('/images/про.png');
+    background-size: cover;
+    background-position: center;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 0; 
+  }
+
+
+/*телефон*/
+@media (max-width: 600px) {
+  nav ul li {
+    display: block;
+    margin: 10px 0;
+  }
+
+  .tour-list {
+    grid-template-columns: 1fr;
+  }
+
+  .navbar {
+    width: 100%;
+    font-size: 14px;
+  }
+
+  header {
+    background-position: top;
+    text-align: center;
+    padding: 20px;
+  }
+}
+
+/*планшет*/
+@media (max-width: 1024px) and (min-width: 601px) {
+  .tour-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .navbar {
+    font-size: 15px;
+  }
+
+  nav ul li {
+    margin-right: 10px;
+  }
+}
